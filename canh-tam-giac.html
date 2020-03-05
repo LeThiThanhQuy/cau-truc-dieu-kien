@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tam giác</title>
+</head>
+<body>
+<script>
+
+        // Nhập 3 cạnh
+
+        let a = parseInt(prompt("Nhập cạnh a = "));
+        let b = parseInt(prompt("Nhập cạnh b = "));
+        let c = parseInt(prompt("Nhập cạnh c = "));
+        let chuVi, heSo, dienTich;
+
+        document.write("Cạnh a = "+ a);
+        document.write("<br/>");
+
+        document.write("Cạnh b = "+ b);
+        document.write("<br/>");
+
+        document.write("Cạnh c = "+c);
+        document.write("<br/>");
+
+        // Chứng minh tam giác
+        if (((a+ b) > c) && ((a + c) > b) && ((b + c) > a)) {
+            document.write("là 3 cạnh của tam giác.");
+            document.write("<br/>");
+
+         // Tính chu vi
+            chuVi=a+b+c;
+            document.write("Chu vi = "+chuVi);
+            document.write("<br/>");
+
+        //Tính diện tích
+            heSo=(a+b+c)/2;
+            dienTich=Math.sqrt(heSo*((heSo-a)*(heSo-b)*(heSo-c)));
+            document.write("Diện tích = "+dienTich);
+            document.write("<br/>");
+
+        }
+        else document.write("không là 3 cạnh của tam giác.");
+
+        // Xét tam giác
+        {
+            if ( a * a + b * b === c * c || a * a + c * c === b * b || b * b + c * c === a * a ) {
+                document.write("Đây là tam giác vuông.");
+                document.write("<br/>");
+            }
+        }
+
+        {
+            if ((a===b)&&(a===c)) {
+                document.write("Đây là tam giác đều.");
+                document.write("<br/>");
+            }
+            else {
+                if ((a === b) || (a === c) || (b === c)) {
+                    document.write("Đây là tam giác cân.");
+                    document.write("<br/>");
+                }
+            }
+        }
+
+
+
+</script>
+
+
+
+</body>
+</html>
